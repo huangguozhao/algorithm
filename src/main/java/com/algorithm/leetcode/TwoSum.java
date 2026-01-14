@@ -213,5 +213,16 @@ public class TwoSum implements AlgorithmTest {
         printAlgorithmInfo();
         testInternal();
     }
+
+    /**
+     * 单独测试这个算法
+     * 运行命令：java -cp target/classes com.algorithm.leetcode.TwoSum
+     */
+    public static void main(String[] args) {
+        System.out.println("=== 单独测试：两数之和 ===\n");
+
+        TwoSum algorithm = new TwoSum();
+        algorithm.test();
+    }
 }
 

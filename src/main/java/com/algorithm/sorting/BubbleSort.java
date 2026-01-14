@@ -140,5 +140,16 @@ public class BubbleSort implements AlgorithmTest {
     public int[] getSortedArray() {
         return array;
     }
+
+    /**
+     * 单独测试这个算法
+     * 运行命令：java -cp target/classes com.algorithm.sorting.BubbleSort
+     */
+    public static void main(String[] args) {
+        System.out.println("=== 单独测试：冒泡排序 ===\n");
+
+        BubbleSort algorithm = new BubbleSort(new int[]{64, 34, 25, 12, 22, 11, 90});
+        algorithm.test();
+    }
 }
 

@@ -208,5 +208,17 @@ public class BinarySearch implements AlgorithmTest {
         java.util.Arrays.sort(array);
         return binarySearchRecursive(array, 0, array.length - 1, target);
     }
+
+    /**
+     * 单独测试这个算法
+     * 运行命令：java -cp target/classes com.algorithm.searching.BinarySearch
+     */
+    public static void main(String[] args) {
+        System.out.println("=== 单独测试：二分搜索 ===\n");
+
+        int[] searchArray = {1, 3, 5, 7, 9, 11, 13, 15};
+        BinarySearch algorithm = new BinarySearch(searchArray, 7);
+        algorithm.test();
+    }
 }
 

@@ -298,4 +298,15 @@ public class LongestSubstringWithoutRepeatingCharacters implements AlgorithmTest
         printAlgorithmInfo();
         testInternal();
     }
+
+    /**
+     * 直接运行这个类的main方法来单独测试
+     * 运行命令：mvn exec:java -Dexec.mainClass="com.algorithm.leetcode.LongestSubstringWithoutRepeatingCharacters"
+     */
+    public static void main(String[] args) {
+        System.out.println("=== 单独测试：无重复字符的最长子串 ===\n");
+
+        LongestSubstringWithoutRepeatingCharacters algorithm = new LongestSubstringWithoutRepeatingCharacters();
+        algorithm.test();
+    }
 }

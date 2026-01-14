@@ -6,8 +6,8 @@ import com.algorithm.searching.BinarySearch;
 import com.algorithm.leetcode.TwoSum;
 import com.algorithm.leetcode.AddTwoNumbers;
 import com.algorithm.leetcode.LongestSubstringWithoutRepeatingCharacters;
+import com.algorithm.leetcode.MedianOfTwoSortedArrays;
 import com.algorithm.utils.AlgorithmTest;
-import com.algorithm.utils.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +48,7 @@ public class Main {
         algorithms.add(new TwoSum());
         algorithms.add(new AddTwoNumbers());
         algorithms.add(new LongestSubstringWithoutRepeatingCharacters());
+        algorithms.add(new MedianOfTwoSortedArrays());
 
         return algorithms;
     }

@@ -152,5 +152,16 @@ public class QuickSort implements AlgorithmTest {
     public int[] getSortedArray() {
         return array;
     }
+
+    /**
+     * 单独测试这个算法
+     * 运行命令：java -cp target/classes com.algorithm.sorting.QuickSort
+     */
+    public static void main(String[] args) {
+        System.out.println("=== 单独测试：快速排序 ===\n");
+
+        QuickSort algorithm = new QuickSort(new int[]{64, 34, 25, 12, 22, 11, 90});
+        algorithm.test();
+    }
 }
 
