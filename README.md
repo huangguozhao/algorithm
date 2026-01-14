@@ -69,6 +69,31 @@ algorithm-practice/
 - **divideconquer**: 分治算法
 - **bitmanipulation**: 位运算算法
 
+## Git仓库配置
+
+本项目同时推送到两个代码托管平台：
+
+- **GitHub**: https://github.com/huangguozhao/algorithm
+- **Gitee**: https://gitee.com/huang-guozhao/algorithm
+
+### 推送代码
+
+#### 方法一：自动推送（推荐）
+```bash
+git push origin master  # 同时推送到GitHub和Gitee
+```
+
+#### 方法二：分别推送
+```bash
+# 使用提供的脚本
+./push-to-both.sh    # Linux/Mac
+./push-to-both.ps1   # Windows PowerShell
+
+# 或手动推送
+git push origin master  # 推送到GitHub
+git push gitee master   # 推送到Gitee
+```
+
 ## 环境要求
 
 - Java 11 或更高版本
