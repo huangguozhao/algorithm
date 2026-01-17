@@ -9,6 +9,7 @@ import com.algorithm.leetcode.LongestSubstringWithoutRepeatingCharacters;
 import com.algorithm.leetcode.MedianOfTwoSortedArrays;
 import com.algorithm.leetcode.RegularExpressionMatching;
 import com.algorithm.leetcode.ContainerWithMostWater;
+import com.algorithm.leetcode.IntegerToRoman;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -53,6 +54,7 @@ public class Main {
         algorithms.add(new MedianOfTwoSortedArrays());
         algorithms.add(new RegularExpressionMatching());
         algorithms.add(new ContainerWithMostWater());
+        algorithms.add(new IntegerToRoman());
 
         return algorithms;
     }
