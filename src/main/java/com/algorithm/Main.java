@@ -7,6 +7,7 @@ import com.algorithm.leetcode.TwoSum;
 import com.algorithm.leetcode.AddTwoNumbers;
 import com.algorithm.leetcode.LongestSubstringWithoutRepeatingCharacters;
 import com.algorithm.leetcode.MedianOfTwoSortedArrays;
+import com.algorithm.leetcode.RegularExpressionMatching;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -49,6 +50,7 @@ public class Main {
         algorithms.add(new AddTwoNumbers());
         algorithms.add(new LongestSubstringWithoutRepeatingCharacters());
         algorithms.add(new MedianOfTwoSortedArrays());
+        algorithms.add(new RegularExpressionMatching());
 
         return algorithms;
     }
