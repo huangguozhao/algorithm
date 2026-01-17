@@ -8,6 +8,7 @@ import com.algorithm.leetcode.AddTwoNumbers;
 import com.algorithm.leetcode.LongestSubstringWithoutRepeatingCharacters;
 import com.algorithm.leetcode.MedianOfTwoSortedArrays;
 import com.algorithm.leetcode.RegularExpressionMatching;
+import com.algorithm.leetcode.ContainerWithMostWater;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -51,6 +52,7 @@ public class Main {
         algorithms.add(new LongestSubstringWithoutRepeatingCharacters());
         algorithms.add(new MedianOfTwoSortedArrays());
         algorithms.add(new RegularExpressionMatching());
+        algorithms.add(new ContainerWithMostWater());
 
         return algorithms;
     }
