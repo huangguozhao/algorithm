@@ -11,6 +11,7 @@ import com.algorithm.leetcode.RegularExpressionMatching;
 import com.algorithm.leetcode.ContainerWithMostWater;
 import com.algorithm.leetcode.IntegerToRoman;
 import com.algorithm.leetcode.RomanToInteger;
+import com.algorithm.leetcode.LongestCommonPrefix;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -57,6 +58,7 @@ public class Main {
         algorithms.add(new ContainerWithMostWater());
         algorithms.add(new IntegerToRoman());
         algorithms.add(new RomanToInteger());
+        algorithms.add(new LongestCommonPrefix());
 
         return algorithms;
     }
