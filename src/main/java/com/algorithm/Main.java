@@ -16,6 +16,7 @@ import com.algorithm.leetcode.ThreeSum;
 import com.algorithm.leetcode.ThreeSumClosest;
 import com.algorithm.leetcode.LetterCombinations;
 import com.algorithm.leetcode.RemoveNthFromEnd;
+import com.algorithm.leetcode.ValidParentheses;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -67,6 +68,7 @@ public class Main {
         algorithms.add(new ThreeSumClosest());
         algorithms.add(new LetterCombinations());
         algorithms.add(new RemoveNthFromEnd());
+        algorithms.add(new ValidParentheses());
 
         return algorithms;
     }
