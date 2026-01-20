@@ -15,6 +15,7 @@ import com.algorithm.leetcode.LongestCommonPrefix;
 import com.algorithm.leetcode.ThreeSum;
 import com.algorithm.leetcode.ThreeSumClosest;
 import com.algorithm.leetcode.LetterCombinations;
+import com.algorithm.leetcode.RemoveNthFromEnd;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -65,6 +66,7 @@ public class Main {
         algorithms.add(new ThreeSum());
         algorithms.add(new ThreeSumClosest());
         algorithms.add(new LetterCombinations());
+        algorithms.add(new RemoveNthFromEnd());
 
         return algorithms;
     }
