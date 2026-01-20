@@ -13,6 +13,7 @@ import com.algorithm.leetcode.IntegerToRoman;
 import com.algorithm.leetcode.RomanToInteger;
 import com.algorithm.leetcode.LongestCommonPrefix;
 import com.algorithm.leetcode.ThreeSum;
+import com.algorithm.leetcode.ThreeSumClosest;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -61,6 +62,7 @@ public class Main {
         algorithms.add(new RomanToInteger());
         algorithms.add(new LongestCommonPrefix());
         algorithms.add(new ThreeSum());
+        algorithms.add(new ThreeSumClosest());
 
         return algorithms;
     }
