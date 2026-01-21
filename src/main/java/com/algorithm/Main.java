@@ -17,6 +17,7 @@ import com.algorithm.leetcode.ThreeSumClosest;
 import com.algorithm.leetcode.LetterCombinations;
 import com.algorithm.leetcode.RemoveNthFromEnd;
 import com.algorithm.leetcode.ValidParentheses;
+import com.algorithm.leetcode.MergeTwoSortedLists;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -69,6 +70,7 @@ public class Main {
         algorithms.add(new LetterCombinations());
         algorithms.add(new RemoveNthFromEnd());
         algorithms.add(new ValidParentheses());
+        algorithms.add(new MergeTwoSortedLists());
 
         return algorithms;
     }
