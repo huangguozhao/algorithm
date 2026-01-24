@@ -21,6 +21,8 @@ import com.algorithm.leetcode.MergeTwoSortedLists;
 import com.algorithm.leetcode.SwapNodesInPairs;
 import com.algorithm.leetcode.ReverseKGroup;
 import com.algorithm.leetcode.RemoveDuplicatesFromSortedArray;
+import com.algorithm.leetcode.RemoveElement;
+import com.algorithm.leetcode.ImplementStrStr;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -77,6 +79,8 @@ public class Main {
         algorithms.add(new SwapNodesInPairs());
         algorithms.add(new ReverseKGroup());
         algorithms.add(new RemoveDuplicatesFromSortedArray());
+        algorithms.add(new RemoveElement());
+        algorithms.add(new ImplementStrStr());
 
         return algorithms;
     }
