@@ -19,6 +19,7 @@ import com.algorithm.leetcode.RemoveNthFromEnd;
 import com.algorithm.leetcode.ValidParentheses;
 import com.algorithm.leetcode.MergeTwoSortedLists;
 import com.algorithm.leetcode.SwapNodesInPairs;
+import com.algorithm.leetcode.ReverseKGroup;
 import com.algorithm.utils.AlgorithmTest;
 
 import java.util.ArrayList;
@@ -73,6 +74,7 @@ public class Main {
         algorithms.add(new ValidParentheses());
         algorithms.add(new MergeTwoSortedLists());
         algorithms.add(new SwapNodesInPairs());
+        algorithms.add(new ReverseKGroup());
 
         return algorithms;
     }
