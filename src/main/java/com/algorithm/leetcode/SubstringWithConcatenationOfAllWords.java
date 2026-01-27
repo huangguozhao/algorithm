@@ -43,56 +43,36 @@ public class SubstringWithConcatenationOfAllWords {
             wordFreq.put(word, wordFreq.getOrDefault(word, 0) + 1);
         }
 
-        // Try each possible starting position (0 to wordLen-1)
-        for (int i = 0; i < wordLen; i++) {
-            // Sliding window for this starting offset
-            int left = i;
-            int right = i;
-            int matched = 0;
+        // Try each possible starting position offset (0 to wordLen-1)
+        for (int offset = 0; offset < wordLen; offset++) {
+            // For each offset, check all possible starting positions
+            for (int start = offset; start <= s.length() - totalLen; start += wordLen) {
+                Map<String, Integer> seen = new HashMap<>();
+                boolean valid = true;
 
-            // Frequency map for current window
-            Map<String, Integer> windowFreq = new HashMap<>();
+                // Check each word in the current window
+                for (int i = 0; i < wordCount; i++) {
+                    int wordStart = start + i * wordLen;
+                    String word = s.substring(wordStart, wordStart + wordLen);
 
-            // Move right pointer
-            while (right + wordLen <= s.length()) {
-                // Get current word
-                String word = s.substring(right, right + wordLen);
-                right += wordLen;
-
-                // If word is in our word list
-                if (wordFreq.containsKey(word)) {
-                    windowFreq.put(word, windowFreq.getOrDefault(word, 0) + 1);
-
-                    // If we have too many of this word, we need to shrink window
-                    if (windowFreq.get(word) > wordFreq.get(word)) {
-                        matched--;
-                    } else {
-                        matched++;
+                    // Word not in our word list
+                    if (!wordFreq.containsKey(word)) {
+                        valid = false;
+                        break;
                     }
 
-                    // Shrink window from left if we have a complete match
-                    while (matched == wordCount) {
-                        // Check if window size matches total length
-                        if (right - left == totalLen) {
-                            result.add(left);
-                        }
+                    seen.put(word, seen.getOrDefault(word, 0) + 1);
 
-                        // Remove leftmost word
-                        String leftWord = s.substring(left, left + wordLen);
-                        left += wordLen;
-
-                        if (wordFreq.containsKey(leftWord)) {
-                            windowFreq.put(leftWord, windowFreq.get(leftWord) - 1);
-                            if (windowFreq.get(leftWord) >= wordFreq.get(leftWord)) {
-                                matched--;
-                            }
-                        }
+                    // Too many occurrences of this word
+                    if (seen.get(word) > wordFreq.get(word)) {
+                        valid = false;
+                        break;
                     }
-                } else {
-                    // Word not in our list, reset window
-                    windowFreq.clear();
-                    matched = 0;
-                    left = right;
+                }
+
+                // All words match the frequency requirements
+                if (valid && seen.equals(wordFreq)) {
+                    result.add(start);
                 }
             }
         }
@@ -168,9 +148,9 @@ public class SubstringWithConcatenationOfAllWords {
                 Arrays.asList(6, 9, 12), "Example 3: barfoofoobarthefoobarman with [bar, foo, the]");
         testCase("wordgoodgoodgoodbestword", new String[]{"word", "good", "best", "good"},
                 Arrays.asList(8), "Good example with [word, good, best, good]");
-        testCase("aaaaaaaaaaaaaa", new String[]{"aa", "aa"}, Arrays.asList(0, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9),
+        testCase("aaaaaaaaaaaaaa", new String[]{"aa", "aa"}, Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
                 "Repeated words: aaaaaaaaaaaaaa with [aa, aa]");
-        testCase("foobarfoobar", new String[]{"foo", "bar"}, Arrays.asList(0, 3),
+        testCase("foobarfoobar", new String[]{"foo", "bar"}, Arrays.asList(0, 3, 6),
                 "Simple case: foobarfoobar with [foo, bar]");
         testCase("", new String[]{"foo", "bar"}, Arrays.asList(),
                 "Empty string");
